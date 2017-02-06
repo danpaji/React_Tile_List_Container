@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">-->
+    <title>Premier List Group</title>
+
+    <!--Bootstrap reference-->
+    <link rel="stylesheet" href="style/library/bootstrap.css">
+</head>
+
+<body>
+    <div class="premierWidget" id="root"></div>
+
+    <script>
+        localStorage['premierData'] = JSON.stringify({
+            fetching: false,
+            containers: [
+                {
+                    cid: "C1",
+                    name: "Container 1",
+                    type: "folder",
+                    activeFolderId: "F1",
+                    renderMode: "tile",
+                    folders: [
+                        {
+                            fid: "F1",
+                            name: "Folder 1",
+                            objects: [{
+                                id: "R1",
+                                name: "Report 1",
+                                desc: "Report 1 Description",
+                                action: "action?id=R1",
+                                pict: {
+                                    url: "images/logo.png",
+                                    caption: "Logo"
+                                }
+                            }, {
+                                id: "R2",
+                                name: "Report 2",
+                                desc: "Report 2 Description",
+                                action: "action?id=R2",
+                                pict: {
+                                    url: "images/logo.png",
+                                    caption: "Logo"
+                                }
+                            }]
+                        },
+                        {
+                            fid: "F2",
+                            name: "Folder 2",
+                            objects: [{
+                                id: "R3",
+                                name: "Report 3",
+                                desc: "Report 3 Description",
+                                action: "action?id=R3",
+                                pict: {
+                                    url: "images/logo.png",
+                                    caption: "Logo"
+                                }
+                            }]
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>

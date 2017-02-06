@@ -1,0 +1,29 @@
+
+.premierWidget button.btn-link.btn,
+.premierWidget.button.btn-link.btn:focus, 
+.premierWidget.button.btn-link.btn:hover, 
+.premierWidget.button.btn-link.btn:active,
+.premierWidget.button.btn-link.btn.active, 
+.premierWidget.button.btn-link.btn:active:focus, 
+.premierWidget.button.btn-link.btn:active.focus, 
+.premierWidget.button.btn-link.btn.active:focus, 
+.premierWidget.button.btn-link.btn.active.focus {
+    color: #337ab7; 
+    background-color: inherit; 
+    border: 0; 
+    box-shadow: unset;
+    outline: unset;
+    outline-offset: unset;
+    text-decoration: none;
+    margin: 0;
+    padding: 0 0 2px 10px;
+    font-size: 12px;
+}
+
+.premierWidget .btn {
+    border-radius: 0px;
+}
+
+.premier-svg:hover {
+    color: #728397 !important;
+}
