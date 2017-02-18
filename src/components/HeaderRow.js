@@ -8,6 +8,8 @@ import FolderIcon from 'react-icons/lib/fa/folder'
 import ListIcon from 'react-icons/lib/go/list-unordered'
 import TilesIcon from 'react-icons/lib/ti/th-large-outline'
 
+import './HeaderRow.css'
+
 
 class HeaderRow extends Component {
 
@@ -44,18 +46,15 @@ class HeaderRow extends Component {
             })
         }
 
-        const _titleBarStyle = { fontSize: "12px", borderBottom: "1px solid #CCC", padding: "5px 0 5px 0px" }
-        const _titleIconStyle = { fontSize: "14px", color: "#A2B3C7", margin: "0 5px 0", padding: "0px" }
-        const _titleTxtStyle = { color: "#697788", fontWeight: "500" }
         return (
             <RB.Row>
-                <RB.Col xs={12} style={_titleBarStyle}>
-                    <span style={_titleIconStyle}><FolderIcon /></span><span style={_titleTxtStyle}>{cname} ({_numObjs})</span>
+                <RB.Col xs={12} className="title-bar">
+                    <span className="title-icon"><FolderIcon /></span><span  className="title-text" >{cname} ({_numObjs})</span>
                     <RB.DropdownButton bsSize="sm" bsStyle="link" title={_selectedItem} id={Date.now()}>
                         {_headerItems}
                     </RB.DropdownButton>
-                    <ListIcon className="pull-right premier-svg" style={_titleIconStyle} onClick={this.onViewModeClick.bind(this, 'list')} />
-                    <TilesIcon className="pull-right premier-svg" style={_titleIconStyle} onClick={this.onViewModeClick.bind(this, 'tile')} />
+                    <ListIcon className="pull-right premier-svg title-icon" onClick={this.onViewModeClick.bind(this, 'list')} />
+                    <TilesIcon className="pull-right premier-svg title-icon" onClick={this.onViewModeClick.bind(this, 'tile')} />
                 </RB.Col>
             </RB.Row>
         )

@@ -1,0 +1,18 @@
+
+.title-bar {
+    font-size: 12px;
+    border-bottom: 1px solid #CCC;
+    padding: 5px 0 5px 0px;
+}
+
+.title-icon {
+    font-size: 14px;
+    color: #A2B3C7;
+    margin: 0 5px 0;
+    padding: 0px;
+}
+
+.title-text {
+    color: #697788;
+    font-weight: 500;
+}

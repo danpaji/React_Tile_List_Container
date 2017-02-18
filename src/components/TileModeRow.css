@@ -1,0 +1,52 @@
+
+.tile-container {
+    height : 240px;
+    overflow-y: scroll;
+}
+
+.tile {
+    float: left;
+    background-color: #FFF;
+    padding: 10px 5px;
+    height: auto;
+    border: 1px solid #AAA;
+    margin: 8px 6px;
+}
+
+.tile-icon-section {
+    height: inherit;
+    width: auto;
+    margin: 0px 5px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.tile-info-container {
+    height: inherit;
+    width: 250px;
+    vertical-align: top;
+    display: inline-block;
+    margin: 5px 5px 0;
+}
+
+.tile-container-name {
+    font-size: 14px;
+    color: #378AC5;
+    height: 36px;
+}
+
+.tile-container-desc {
+    font-size: 12px;
+    height: 70px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.tile-info-button {
+     border-top: 1px solid #DDD;
+}
+
+.tile-info-button button {
+     margin-top: 7px;
+     margin-right: 5pm;
+}

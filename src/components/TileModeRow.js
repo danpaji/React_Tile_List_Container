@@ -3,27 +3,26 @@ import * as RB from 'react-bootstrap'
 
 import { connect } from 'react-redux'
 
+import './TileModeRow.css'
+
 const Tile = (props) => {
     const { item } = props
     const { name, desc, pict, action } = item
 
-    const _tileContainerStyle = { float: "left", backgroundColor: "#FFF", padding: "10px 5px", height: "auto", border: "1px solid #AAA", margin: "8px 6px" }
-    const _tileIconSectionStyle = { height: "inherit", width: "auto", margin: "0px 5px", verticalAlign: "top", display: "inline-block" }
-    const _tileTitleDescStyle = { height: "inherit", width: "250px", verticalAlign: "top", display: "inline-block", margin: "5px 5px 0" }
     return (
-        <div style={_tileContainerStyle}>
-            <div style={_tileIconSectionStyle}>
+        <div className="tile">
+            <div className="tile-icon-section">
                 <img alt={pict.caption} src={pict.url} />
             </div>
-            <div style={_tileTitleDescStyle}>
-                <p style={{ fontSize: "14px", color: "#378AC5", height: "36px" }}>
+            <div className="tile-info-container">
+                <p className="tile-container-name">
                     <a href={action} target="_blank">
                         {name}
                     </a>
                 </p>
-                <p style={{ fontSize: "12px", height: "70px", overflowY: "auto", paddingRight: "5px" }}>{desc}</p>
-                <RB.ButtonToolbar style={{ borderTop: "1px solid #DDD" }}>
-                    <RB.Button bsStyle="warning" bsSize="sm" style={{ marginTop: "7px", rightMargin: "5pm" }} className="pull-right">Edit</RB.Button>
+                <p className="tile-container-desc">{desc}</p>
+                <RB.ButtonToolbar className="tile-info-button">
+                    <RB.Button bsStyle="warning" bsSize="sm" className="pull-right">Edit</RB.Button>
                 </RB.ButtonToolbar>
 
             </div>
@@ -33,9 +32,8 @@ const Tile = (props) => {
 
 
 const TileModeRow = (props) => {
-    const { height, items } = props
+    const { items } = props
 
-    const _tileContainerStyle = { height: height ? height : "240px", overflowY: "scroll" }
     const _tiles = items.map((item, i) => {
         if (item)
             return <Tile key={item.id} item={item} />
@@ -44,7 +42,7 @@ const TileModeRow = (props) => {
     })
 
     return (
-        <RB.Row style={_tileContainerStyle}>
+        <RB.Row className="tile-container">
             <RB.Col xs={12}>
                 {_tiles}
             </RB.Col>

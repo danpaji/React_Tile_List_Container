@@ -2,9 +2,10 @@ import React from 'react'
 import * as RB from 'react-bootstrap'
 import { connect } from 'react-redux'
 
+import './ListModeRow.css'
 
 const ListModeRow = (props) => {
-    const { height, items } = props
+    const { items } = props
 
     const _listRows = items.map((item, i) => {
         if (item)
@@ -13,9 +14,8 @@ const ListModeRow = (props) => {
             return null
     })
 
-    const _tileContainerStyle = { margin: "5px 0", height: height ? height : "240px", overflowY: "scroll", fontSize: "14px" }
     return (
-        <RB.Row style={_tileContainerStyle}>
+        <RB.Row className="list-row-container">
             <RB.Col xs={12}>
                 <RB.Table striped condensed hover>
                     <thead>
